@@ -26,7 +26,9 @@ namespace MeetupAPI.Controllers
                 ((IConfigurationRoot)_configuration).Reload();
                 return Ok();
             }
+#pragma warning disable IDE0059 // Unnecessary assignment of a value
             catch (Exception e)
+#pragma warning restore IDE0059 // Unnecessary assignment of a value
             {
                 return StatusCode(500);
             }
